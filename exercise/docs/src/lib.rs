@@ -15,8 +15,20 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+/*! A pumpkin is a vernacular term for mature winter squash of species and varieties in the genus Cucurbita that has culinary and cultural significance[1][2] but no agreed upon botanical or scientific meaning.[3] The term pumpkin is sometimes used interchangeably with "squash" or "winter squash", and is commonly used for cultivars of Cucurbita argyrosperma, Cucurbita ficifolia, Cucurbita maxima, Cucurbita moschata, and Cucurbita pepo.[1]
+
+Native to North America (northeastern Mexico and the southern United States), C. pepo pumpkins are one of the oldest domesticated plants, having been used as early as 7,000 to 5,500 BC. Today, pumpkins of varied species are widely grown for food, as well as for aesthetic and recreational purposes.[4] The pumpkin's thick shell contains edible seeds and pulp. Pumpkin pie, for instance, is a traditional part of Thanksgiving meals in Canada and the United States, and pumpkins are frequently carved as jack-o'-lanterns for decoration around Halloween, although commercially canned pumpkin purée and pumpkin pie fillings are usually made of different pumpkin varieties from those used for jack-o'-lanterns.[5]
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+*/
+
+/// Big orange thing
+///
+/// # Recipes
+/// Recipes will be coming soon
 pub struct Pumpkin {
+    /// roundness is a percentage
     pub roundness: f32,
+    /// orangeness is a number from 8 to 27. See [`BURNT_ORANGE`]
     pub orangeness: i32,
 }
 
@@ -24,12 +36,14 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /// If you smash the pumpkin, it will be gone. Then it can't be used for pie.
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+/// BURNT_ORANGE is for the "orangeness" field in the [`Pumpkin`] struct.
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
