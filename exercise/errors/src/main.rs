@@ -1,7 +1,7 @@
 // START IN lib.rs!
 
-use aquarium::Dolphin;
 use anyhow::Result;
+use aquarium::Dolphin;
 // Silence some warnings so they don't distract from the exercise.
 #[allow(clippy::vec_init_then_push)]
 
@@ -19,8 +19,8 @@ fn play_time(dolphin: &Dolphin) -> Result<Vec<String>> {
     //
     // let response = dolphin.say_your_name()?;    // this can be done with an intermediate variable...
     responses.push(dolphin.say_your_name()?); // ...or all on one line. Either way is fine!
-    //
-    // 2c. Do the same thing as #2b for the .flip() method
+                                              //
+                                              // 2c. Do the same thing as #2b for the .flip() method
     responses.push(dolphin.flip()?);
     // 2d. Do the same thing as #2b for the .shake_hands() method
     responses.push(dolphin.shake_hands()?);
@@ -54,7 +54,7 @@ fn main() -> Result<()> {
     for dolphin in &dolphins {
         // Challenge: Change main() so that it returns a Result, and instead of handling the error
         // that play_time returns, use the try (?) operator to only handle the success condition.
-        // 
+        //
         // If done correctly, the output of the program will become much shorter. Since play_time
         // returns an Err variant the first time it is called, the try operator will return it from
         // main(), which will end the program at the first error. anyhow's Result will take care of

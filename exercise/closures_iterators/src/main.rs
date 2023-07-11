@@ -29,7 +29,7 @@ fn main() {
     // Hint 2: `x` will be a mutable reference, so remember to dereference it to use it
 
     let mut numbers = vec![1, 2, 3, 4];
-    numbers.iter_mut().map(|x| {*x *= 3}).for_each(drop);
+    numbers.iter_mut().map(|x| *x *= 3).for_each(drop);
     println!("{:?}", numbers);
     // for x in &mut numbers {
     //     *x *= 3; // multiply the value by 3 via the mutable reference x

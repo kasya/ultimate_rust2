@@ -92,11 +92,11 @@ fn main() {
     // - Uncomment the code below AND uncomment the smell_cake() function at the bottom of this file
     // - Implement `From<Party> for Cake` so that the function call below works.
     //
-     impl From<&Party> for Cake {
+    impl From<&Party> for Cake {
         fn from(party: &Party) -> Self {
             party.cake
         }
-     }
+    }
 
     smell_cake(&party);
 
@@ -104,7 +104,10 @@ fn main() {
     // consuming it. Change the code above to pass in a &party. Then uncomment and run the code
     // below. After all, you want to smell your cake and eat it, too!
 
-    println!("Yum! I'm eating this cake: {:?}. Oops, I dropped it on the floor.", party.cake);
+    println!(
+        "Yum! I'm eating this cake: {:?}. Oops, I dropped it on the floor.",
+        party.cake
+    );
     drop(cake);
 }
 
